@@ -5,7 +5,7 @@ import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
-import ActionButton from "@/shared/actionButton";
+import ActionButton from "@/shared/ActionButton";
 
 type Props = {
   selectedPage: SelectedPage;
