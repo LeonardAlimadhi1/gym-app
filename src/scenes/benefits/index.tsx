@@ -32,13 +32,30 @@ const index = ({ setSelectedPage }: Props) => {
         "Experience peak fitness with our state-of-the-art facilities, setting the standard for excellence in your wellness journey.",
     },
   ];
+
+  const container = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.2 },
+    },
+  };
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
+    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20 md:mt-5">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* Header */}
-        <div className="md:mt-24 md:w-3/5 ">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="md:mt-24 md:w-3/5 "
+        >
           <HeaderText>MORE THAN JUST A GYM</HeaderText>
           <div className=" md:mt-4 ">
             <p className=" my-5 text-sm">
@@ -47,10 +64,16 @@ const index = ({ setSelectedPage }: Props) => {
               to the best version of you
             </p>
           </div>
-        </div>
+        </motion.div>
         {/* BENEFITS */}
-        <div className=" mt-5 items-center justify-between gap-8 md:flex ">
-          {benefitsData.map((e) => (
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+          className=" mt-5 items-center justify-between gap-8 md:flex "
+        >
+          {benefitsData.map((e: BenefitType) => (
             <Benefit
               icon={e.icon}
               title={e.title}
@@ -58,7 +81,7 @@ const index = ({ setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
