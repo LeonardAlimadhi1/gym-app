@@ -64,7 +64,17 @@ const OurClasses = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
       >
         {/* Header with description */}
-        <div className=" w-4/5 py-20">
+        <motion.div
+          className=" w-4/5 py-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <HeaderText> Our Classes</HeaderText>{" "}
           <p className=" mt-5 text-sm  ">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -74,7 +84,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt.
           </p>
-        </div>
+        </motion.div>
         <div className=" mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
           <ul className=" w-[2800px] whitespace-nowrap">
             {classesData.map((e, index) => (
