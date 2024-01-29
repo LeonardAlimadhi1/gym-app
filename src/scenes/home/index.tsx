@@ -56,7 +56,10 @@ const Home = ({ setSelectedPage }: Props) => {
               }}
               className=" mt-8 flex items-center gap-8 "
             >
-              <ActionButton setSelectedPage={setSelectedPage}>
+              <ActionButton
+                setSelectedPage={setSelectedPage}
+                selectedPage={SelectedPage.ContactUs}
+              >
                 Join Now
               </ActionButton>
               <AnchorLink
