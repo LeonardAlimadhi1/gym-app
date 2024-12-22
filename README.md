@@ -81,19 +81,6 @@ tsconfig.json: This is the main TypeScript configuration file for the project. I
 
 vite-env.d.ts: This TypeScript declaration file is used to declare global variables or types for the Vite build tool. It allows for type checking and IntelliSense support within Vite configuration files or other parts of the project.
 
-## Upcoming features
-
-Membership Information: Provide detailed information about membership options, including pricing, packages, and membership benefits.
-
-Online Booking and Registration: Enable members to book classes, appointments with trainers, or reserve spots in group sessions online. This feature also will allow a costumer to sign up for a membership through integrating a payment gateway.
-
-Virtual Tours and Photos: Showcase the gym's facilities with high-quality photos and virtual tours. Highlight key features such as equipment, amenities, locker rooms, and common areas to give visitors a sense of the gym's atmosphere and offerings.
-
-Member Portal: Create a secure member portal where members can access their account information, view payment history, update personal details, and manage class bookings. This feature enhances member experience and streamlines administrative tasks for the gym staff.
-
-Special Offers and Promotions: Promote special offers, discounts, and referral programs to attract new members and reward loyal customers. Display these offers prominently on the website and encourage visitors to take advantage of them.
-
-## Development in progress...
   
 
 
